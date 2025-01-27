@@ -1,26 +1,28 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="flex min-h-screen">
+    <SidebarComponent />
+    <div class="flex-1 flex flex-col">
+      <HeaderComponent />
+      <MainContent />
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HeaderComponent from './components/HeaderComponent.vue'
+import SidebarComponent from './components/SidebarComponent.vue'
+import MainContent from './components/MainContent.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    HeaderComponent,
+    SidebarComponent,
+    MainContent,
+  },
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import url("./assets/tailwind.css");
 </style>
